@@ -26,11 +26,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <script>
-
-  function sendInfoEvent(artikelnamn, lastid) {
-        gtag('event', 'read_article', {
-        "artikelnamn": artikelnamn,
-        "lastid": lastid,
+  
 function sendInfoEvent(artikelnamn, lastid) {
     gtag('event', 'read_article', {
     "artikelnamn": artikelnamn,
@@ -45,34 +41,17 @@ function sendInfoEvent(artikelnamn, lastid) {
     if(readArticle1Button) {
 
         readArticle1Button.addEventListener("click", () => {
-        sendInfoEvent(lastid < 10)
+        sendInfoEvent("article1", 10)
          });
 
         document.getElementById("article2").addEventListener("click", () => {
-        sendInfoEvent(lastid > 15)
+        sendInfoEvent("article2" 15)
         });
     }
 
-     document.addEventListener("DOMContentLoaded", () => {
 
-        const readArticle1Button = document.getElementById("read-article-1");
-
-        if(readArticle1Button) {
-
-            readArticle1Button.addEventListener("click", () => {
-            sendInfoEvent("Melinda", 9)
-             });
 });
 
-            document.getElementById("read-article-2").addEventListener("click", () => {
-            sendInfoEvent("Melinda", 20)
-            });
-        }
 console.log("try me");
-
-
-    });
-
- console.log("try me");
 
 </script>
